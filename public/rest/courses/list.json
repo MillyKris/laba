@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "img_path": "catalogue-img/JS ES6 Basics.jpg",
+    "name": "Modern JavaScript: ES6 Basics",
+    "teacher": "Professor and Associate Vice Provost",
+    "program": "In this project, you'll learn the most fundamental ES6 features and practice them with live hands-on examples. You'll start writing modern JavaScript and really understand why we need ES6.Mastering modern JavaScript starts with understanding the reasoning",
+    "cost": 2500
+  },
+  {
+    "id": 2,
+    "img_path": "catalogue-img/JS jQuery and JSON.jpg",
+    "name": "JavaScript, jQuery and JSON",
+    "teacher": "Subject Matter Expert / Instructor",
+    "program": "In this course, we'll look at the JavaScript language, and how it supports the Object-Oriented pattern, with a focus on the unique aspect of how JavaScript approaches OO. We'll explore a brief introduction to the jQuery library, which is widely used to do",
+    "cost": 5000
+  },
+  {
+    "id": 3,
+    "img_path": "catalogue-img/MySQL with PHP.jpg",
+    "name": "Using MySQL Database with PHP",
+    "teacher": "Clinical Professor",
+    "program": "1)Using PDO to access an SQL-based database with PHP\n2)Using MySQLi to access a MySQL database with PHP",
+    "cost": 3000
+  },
+  {
+    "id": 4,
+    "img_path": "catalogue-img/Django.jpg",
+    "name": "Django for Everybody",
+    "teacher": "Clinical Professor",
+    "program": "This specialization introduces Python programmers to building websites using the Django library. Across the four courses, you will learn HTML, CSS, SQL, Django, JavaScript, jQuery, and JSON Web Services.  During the course, you will build online websites ",
+    "cost": 4000
+  }
+]
