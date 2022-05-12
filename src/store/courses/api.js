@@ -8,7 +8,7 @@ class Courses extends Api {
    */
   courses = () => this.rest('/courses/list.json');
 
-  coursesFilter = (teacherId)  => this.rest('/courses/list-filtered.json?id=' + teacherId);
+  coursesFilter = ()  => this.rest('/courses/list-filtered.json');
 
   /**
    * Удалит студента по id

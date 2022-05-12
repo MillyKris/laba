@@ -4,9 +4,11 @@ export default {
   namespaced: true,
   state: {
     items: [],
+    itemsFilter: [],
   },
   getters: {
     items: state => state.items,
+    itemsFilter:state => state.itemsFilter,
     itemsByKey: state => state.items.reduce((res, cur) => {
       res[cur['id']] = cur;
       return res;
@@ -16,6 +18,9 @@ export default {
   mutations: {
     setItems: (state, items) => {
       state.items = items;
+    },
+    setItemsFilter: (state, items) => {
+      state.itemsFilter = items;
     },
     setItem: (state, item) => {
       state.items.push(item);
@@ -35,10 +40,10 @@ export default {
       const items = await response.json();
       commit('setItems', items)
     },
-    fetchItemsF: async ({ commit }, id) => {
-      const response = await api.coursesFilter(id);
+    fetchItemsF: async ({ commit }) => {
+      const response = await api.coursesFilter();
       const items = await response.json();
-      commit('setItems', items)
+      commit('setItemsFilter', items)
     },
     removeItem: async ({ commit }, id) => {
       const idRemovedItem = await api.remove( id );

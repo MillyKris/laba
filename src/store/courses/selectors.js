@@ -3,6 +3,11 @@ export const fetchItems = (store) => {
   dispatch('courses/fetchItems');
 };
 
+export const fetchItemsF = (store) => {
+  const { dispatch } = store;
+  dispatch('courses/fetchItemsF');
+};
+
 export const selectItems = (store) => {
 
     const { getters } = store;
@@ -12,8 +17,8 @@ export const selectItems = (store) => {
 export const selectFilteredItems = (store) => {
 
   const { getters } = store;
-  //return getters['courses/items'];
-  return getters['courses/items']
+  return getters['courses/itemsFilter']
+
 }
 
 export const removeItem = (store, id) => {

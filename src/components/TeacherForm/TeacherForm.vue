@@ -10,11 +10,7 @@
       <div :class="$style.label">
         <label for="teacher">Название</label>
       </div>
-      <select v-model="form.teacher" :class="$style.select" name="teacher" id="teacher">
-        <option v-for="item in ['Clinical Professor','Subject Matter Expert / Instructor','Guided Projects Instructor','Professor and Associate Vice Provost']" :key="item" :value="item">
-          {{ item }}
-        </option>
-      </select>
+      <Input v-model="form.teacher" placeholder="Введите название" id = "form.id" />
     </div>
     <div :class="$style.item">
       <Btn @click="onClick" :disabled="!isValidForm" theme="info">Сохранить</Btn>
@@ -29,10 +25,12 @@ import { useRouter } from 'vue-router';
 
 import { selectItemById, fetchItems } from '@/store/teachers/selectors';
 import Btn from '@/components/Btn/Btn';
+import Input from '@/components/Input/Input';
 export default {
   name: 'TeacherForm',
   components: {
     Btn,
+    Input
   },
   props: {
     id: { type: String, default: '' },

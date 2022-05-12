@@ -28,7 +28,7 @@ import { useStore } from 'vuex';
 import { computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
-import { selectFilteredItems, removeItem, fetchItems } from '@/store/courses/selectors';
+import { selectFilteredItems, removeItem, fetchItemsF } from '@/store/courses/selectors';
 import Table from '@/components/Table/Table';
 import Btn from '@/components/Btn/Btn';
 
@@ -45,7 +45,7 @@ export default {
     const store = useStore();
     const router = useRouter();
     onMounted(() => {
-      fetchItems(store);
+      fetchItemsF(store);
     });
     return {
       items: computed(() => selectFilteredItems(store)),
